@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyle Hunteman - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-size: 1.1rem;
+    }
+    .entry {
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+    }
+    .entry .title::before {
+      content: '\2022';
+      color: #336699;
+      font-size: 1.4em;
+      display: inline-block;
+      width: 1.4em;
+      margin-left: -1.4em;
+    }
+    .entry .description {
+      transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+    }
+    .entry .description.visible {
+      max-height: 1000px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="profilepic.png" alt="Kyle Hunteman" class="profile-pic" />
+      <h1>Kyle Hunteman</h1>
+      <p class="tagline" id="tagline">Building meaningful web experiences & promoting cross-cultural understanding.</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
+        <li><button onclick="switchLang()" id="lang-btn">日本語</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 id="about-title">About Me</h2>
+      <p id="about-desc">I’m a developer passionate about creating accessible, efficient web solutions and bridging cultural gaps through technology and collaboration.</p>
+    </section>
+
+    <section id="experience">
+      <h2 id="experience-title">Experience</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="title" id="ethics">Ethics (AI, Meta Ethics)</div>
+          <div class="description" id="desc-ethics">Deep understanding of ethical frameworks and their cultural variations, particularly between Western and Japanese contexts.</div>
+        </div>
+        <div class="entry">
+          <div class="title" id="logic">Logic & Advanced Logic</div>
+          <div class="description" id="desc-logic">Can identify fallacies and generate coherent, timely insights.</div>
+        </div>
+        <div class="entry">
+          <div class="title" id="anthro">Anthropology</div>
+          <div class="description" id="desc-anthro">Skilled in cultural analysis and ethnographic methods, particularly in gender, religion, and language.</div>
+        </div>
+        <div class="entry">
+          <div class="title" id="waseda">Waseda University (Study Abroad)</div>
+          <div class="description" id="desc-waseda">11 months immersed in Japanese life and language. Balanced Western perspective with Japanese philosophy and thinking styles.</div>
+        </div>
+        <div class="entry">
+          <div class="title" id="intern">International Office Intern</div>
+          <div class="description" id="desc-intern">Guided students through study abroad prep, cross-cultural acclimation, and visa processes.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 id="projects-title">Projects</h2>
+      <div class="project">
+        <h3><a href="https://www.sapiens.org/language/gendered-insults/" target="_blank">SUS AND ITS SUS ORIGINS</a></h3>
+        <p id="project-desc">An anthropological analysis of the word "sus" in cultural and gendered contexts.</p>
+        <img src="project1.png" alt="Screenshot of SUS project">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p>Email: <a href="mailto:kylehunteman2@gmail.com">kylehunteman2@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/kyle-hunteman-540796308" target="_blank">LinkedIn</a> | <a href="https://github.com/areckai" target="_blank">GitHub</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Kyle Hunteman</p>
+  </footer>
+
+  <script>
+    const jp = {
+      tagline: "意味のあるウェブ体験を構築し、異文化理解を深めます。",
+      "nav-about": "紹介",
+      "nav-experience": "経験",
+      "nav-projects": "プロジェクト",
+      "nav-contact": "連絡先",
+      "lang-btn": "English",
+      "about-title": "紹介",
+      "about-desc": "効率的でアクセスしやすいウェブソリューションを開発し、テクノロジーを通じて異文化の橋渡しを行うことに情熱を持つ開発者です。",
+      "experience-title": "経験",
+      ethics: "倫理（AI・メタ倫理）",
+      logic: "論理（応用・形式論理）",
+      anthro: "人類学（文化・宗教・ジェンダーなど）",
+      waseda: "早稲田大学（交換留学）",
+      intern: "国際交流オフィス インターン",
+      "desc-ethics": "倫理的枠組みと文化的な違いに深い理解があり、西洋と日本の倫理観の比較に精通しています。",
+      "desc-logic": "誤謬を特定し、一貫性のある的確なインサイトを迅速に提供できます。",
+      "desc-anthro": "ジェンダー、宗教、言語を中心とした文化分析や民族誌的手法に熟練しています。",
+      "desc-waseda": "11ヶ月間日本で生活し、言語と文化に没頭。西洋的視点と日本の思考法を柔軟に統合しました。",
+      "desc-intern": "留学生の受け入れ対応、文化適応支援、ビザ手続きサポートなどを担当しました。",
+      "projects-title": "プロジェクト",
+      "project-desc": "「sus」という言葉の文化的・ジェンダー的意味を分析した人類学的エッセイ。",
+      "contact-title": "連絡先"
+    };
+
+    let isJP = false;
+    function switchLang() {
+      isJP = !isJP;
+      for (const key in jp) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = isJP ? jp[key] : translations[key] || el.dataset.originalText || el.innerText;
+      }
+    }
+
+    const translations = {};
+    document.addEventListener("DOMContentLoaded", () => {
+      for (const key in jp) {
+        const el = document.getElementById(key);
+        if (el) translations[key] = el.innerText;
+      }
+
+      document.querySelectorAll('.entry .title').forEach(title => {
+        title.addEventListener('click', () => {
+          const desc = title.nextElementSibling;
+          desc.classList.toggle('visible');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
